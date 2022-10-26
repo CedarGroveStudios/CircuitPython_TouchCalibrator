@@ -49,10 +49,10 @@ and pasted into the calling code's touchscreen instantiation statement.
 Touchscreen Instantiation example code for built-in displays.
 The order of the calibration tuples is determined by the display rotation value:
 
-.. image: https://github.com/CedarGroveStudios/CircuitPython_TouchCalibrator/blob/main/media/Touch_Calib_example.png
+.. image:: https://github.com/CedarGroveStudios/CircuitPython_TouchCalibrator/blob/main/media/Touch_Calib_example.png
     :alt: Touchscreen Instantiation Example Code
 
-.. image: https://github.com/CedarGroveStudios/CircuitPython_TouchCalibrator/blob/main/media/touch_calibrator_screen.jpg)
+.. image:: https://github.com/CedarGroveStudios/CircuitPython_TouchCalibrator/blob/main/media/touch_calibrator_screen.jpg
     :alt: Screen Image Example
 
 
