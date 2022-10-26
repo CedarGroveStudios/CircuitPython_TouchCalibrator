@@ -18,7 +18,7 @@ Introduction
     :target: https://github.com/psf/black
     :alt: Code Style: Black
 
-A simple CircuitPython DisplayIO resistive touchscreen calibrator for Adafruit
+A simple CircuitPython resistive touchscreen calibrator for Adafruit
 built-in and TFT FeatherWing displays.
 
 On-screen touchscreen calibrator for built-in and TFT FeatherWing displays. To
