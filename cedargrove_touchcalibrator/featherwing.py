@@ -63,6 +63,7 @@ __repo__ = (
 #   or "HX8357" for the 3.5" 480x320 TFT FeatherWing (#3651)
 DISPLAY_TYPE = "ILI9341"
 
+# pylint: disable=unused-import
 if DISPLAY_TYPE == "ILI9341":
     from adafruit_ili9341 import ILI9341  # 2.4" 320x240 TFT FeatherWing
 elif DISPLAY_TYPE == "HX8357":
