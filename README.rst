@@ -9,8 +9,8 @@ Introduction
     :alt: Discord
 
 
-.. image:: https://github.com/CedarGroveStudios/Cedargrove_CircuitPython_TouchCalibrator/workflows/Build%20CI/badge.svg
-    :target: https://github.com/CedarGroveStudios/Cedargrove_CircuitPython_TouchCalibrator/actions
+.. image:: https://github.com/CedarGroveStudios/CircuitPython_TouchCalibrator/workflows/Build%20CI/badge.svg
+    :target: https://github.com/CedarGroveStudios/CircuitPython_TouchCalibrator/actions
     :alt: Build Status
 
 
@@ -18,7 +18,42 @@ Introduction
     :target: https://github.com/psf/black
     :alt: Code Style: Black
 
-A simple resistive touchscreen calibrator for Adafruit displays.
+A simple CircuitPython DisplayIO resistive touchscreen calibrator for Adafruit
+built-in and TFT FeatherWing displays.
+
+On-screen touchscreen calibrator for built-in and TFT FeatherWing displays. To
+use, run as a standalone module, include the following line in the calling
+module, or type into the REPL:
+
+.. code-block:: python
+
+       import touchcalibrator.built_in
+
+for built-in displays or
+
+.. code-block:: python
+
+       import touchcalibrator.featherwing
+
+for TFT FeatherWing displays.
+
+Operational parameters such as screen rotation and REPL-only measurement display
+can be set in the ``operational parameters`` portion of the module.
+
+When the test screen appears, use a stylus to swipe to the four edges of the
+visible display area. As the screen is calibrated, the small red square tracks
+the stylus tip (when ``REPL_ONLY=False``). Minimum and maximum calibration
+values will display on the screen and in the REPL. The REPL values can be copied
+and pasted into the calling code's touchscreen instantiation statement.
+
+Touchscreen Instantiation example code for built-in displays.
+The order of the calibration tuples is determined by the display rotation value:
+
+.. image: https://github.com/CedarGroveStudios/CircuitPython_TouchCalibrator/blob/main/media/Touch_Calib_example.png
+    :alt: Touchscreen Instantiation Example Code
+
+.. image: https://github.com/CedarGroveStudios/CircuitPython_TouchCalibrator/blob/main/media/touch_calibrator_screen.jpg)
+    :alt: Screen Image Example
 
 
 Dependencies
@@ -31,35 +66,7 @@ Please ensure all dependencies are available on the CircuitPython filesystem.
 This is easily achieved by downloading
 `the Adafruit library and driver bundle <https://circuitpython.org/libraries>`_
 or individual libraries can be installed using
-`circup <https://github.com/adafruit/circup>`_.Installing from PyPI
-=====================
-.. note:: This library is not available on PyPI yet. Install documentation is included
-   as a standard element. Stay tuned for PyPI availability!
-
-.. todo:: Remove the above note if PyPI version is/will be available at time of release.
-
-On supported GNU/Linux systems like the Raspberry Pi, you can install the driver locally `from
-PyPI <https://pypi.org/project/Cedargrove-circuitpython-touchcalibrator/>`_.
-To install for current user:
-
-.. code-block:: shell
-
-    pip3 install Cedargrove-circuitpython-touchcalibrator
-
-To install system-wide (this may be required in some cases):
-
-.. code-block:: shell
-
-    sudo pip3 install Cedargrove-circuitpython-touchcalibrator
-
-To install in a virtual environment in your current project:
-
-.. code-block:: shell
-
-    mkdir project-name && cd project-name
-    python3 -m venv .venv
-    source .env/bin/activate
-    pip3 install Cedargrove-circuitpython-touchcalibrator
+`circup <https://github.com/adafruit/circup>`_.
 
 Installing to a Connected CircuitPython Device with Circup
 ==========================================================
@@ -76,7 +83,7 @@ following command to install:
 
 .. code-block:: shell
 
-    circup install touchcalibrator
+    circup install cedargrove_touchcalibrator
 
 Or the following command to update an existing version:
 
