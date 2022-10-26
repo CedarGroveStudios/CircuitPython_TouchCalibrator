@@ -54,16 +54,18 @@ from simpleio import map_range
 import adafruit_stmpe610
 
 __version__ = "0.0.0+auto.0"
-__repo__ = "https://github.com/CedarGroveStudios/Cedargrove_CircuitPython_TouchCalibrator.git"
+__repo__ = (
+    "https://github.com/CedarGroveStudios/Cedargrove_CircuitPython_TouchCalibrator.git"
+)
 
 
 # Select display type; ILI9341 for the 2.4" 320x240 TFT FeatherWing (#3315)
 #   or "HX8357" for the 3.5" 480x320 TFT FeatherWing (#3651)
 DISPLAY_TYPE = "ILI9341"
 
-if DISPLAY_TYPE = "ILI9341":
+if DISPLAY_TYPE == "ILI9341":
     from adafruit_ili9341 import ILI9341  # 2.4" 320x240 TFT FeatherWing
-elif DISPLAY_TYPE = "HX8357":
+elif DISPLAY_TYPE == "HX8357":
     from adafruit_hx8357 import HX8357  # 3.5" 480x320 TFT FeatherWing
 
 # Operational parameters:
