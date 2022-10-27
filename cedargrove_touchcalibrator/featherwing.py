@@ -55,7 +55,7 @@ import adafruit_stmpe610
 
 __version__ = "0.0.0+auto.0"
 __repo__ = (
-    "https://github.com/CedarGroveStudios/Cedargrove_CircuitPython_TouchCalibrator.git"
+    "https://github.com/CedarGroveStudios/CircuitPython_TouchCalibrator.git"
 )
 
 
